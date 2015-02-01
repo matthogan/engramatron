@@ -29,6 +29,18 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/join', {
+        templateUrl: 'views/join.html',
+        controller: 'JoinCtrl'
+      })
+      .when('/top', {
+        templateUrl: 'views/top.html',
+        controller: 'TopCtrl'
+      })
+      .when('/idea', {
+        templateUrl: 'views/idea.html',
+        controller: 'IdeaCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
