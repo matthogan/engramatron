@@ -69,7 +69,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="footer-col col-md-4">
-                            <p>
+                            <p> 
                                 <any i18n="common.blurb1"></any>
                             </p>
                             <p>
@@ -104,10 +104,12 @@
                 </div>
             </div>
             <div class="footer-below">
-                <div class="container">
+                <div class="container" ng-controller="MainCtrl">
                     <div class="row">
                         <div class="col-lg-12">
                             <any i18n="common.by"></any>
+                            <br/>
+                            {{hello}}
                         </div>
                     </div>
                 </div>
@@ -153,16 +155,17 @@
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js" type="text/javascript">
-</script><script src="scripts/controllers/main.js" type="text/javascript">
-</script><script src="scripts/controllers/about.js" type="text/javascript">
-</script><script src="scripts/controllers/join.js" type="text/javascript">
-</script><script src="scripts/controllers/top.js" type="text/javascript">
-<script src="scripts/controllers/idea.js"></script>
-<script src="scripts/services/user.js"></script>
-<script src="scripts/services/api.js"></script>
-<script src="scripts/services/userprofile.js"></script>
-<script src="scripts/controllers/login.js"></script>
-</script><!-- endbuild -->
+        <script src="scripts/config.js" type="text/javascript"></script>
+        <script src="scripts/app.js" type="text/javascript"></script>
+        <script src="scripts/controllers/main.js" type="text/javascript"></script>
+        <script src="scripts/controllers/about.js" type="text/javascript"></script>
+        <script src="scripts/controllers/join.js" type="text/javascript"></script>
+        <script src="scripts/controllers/top.js" type="text/javascript"></script>
+        <script src="scripts/controllers/idea.js"></script>
+        <script src="scripts/services/user.js"></script>
+        <script src="scripts/services/api.js"></script>
+        <script src="scripts/services/userprofile.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <!-- endbuild -->
     </body>
 </html>

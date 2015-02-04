@@ -27,6 +27,48 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+    // configuration
+    ngconstant: {
+      options: {
+        space: ' ',
+        wrap: '\'use strict\';\n\n {%= __ngModule %}',
+        name: 'config'
+      }, // Environment targets
+      development: {
+        options: {
+          dest: '<%= yeoman.app %>/scripts/config.js'
+        },        
+        constants: {
+          ENV: {
+            name: 'development',
+            tipHost: 'http://localhost:8083/tip'
+          }
+        }
+      },
+      home: {
+        options: {
+          dest: '<%= yeoman.app %>/scripts/config.js'
+        },        
+        constants: {
+          ENV: {
+            name: 'home',
+            tipHost: 'http://localhost:8080/tip'
+          }
+        }
+      },
+      production: {
+        options: {
+          dest: '<%= yeoman.app %>/scripts/config.js'
+        },
+        constants: {
+          ENV: {
+            name: 'production',
+            tipHost: 'http://localhost:8083/tip'
+          }
+        }
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -362,6 +404,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'ngconstant:development',
       'wiredep',
       'concurrent:server',
       'autoprefixer',
@@ -385,6 +428,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'ngconstant:production',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
@@ -406,3 +450,6 @@ module.exports = function (grunt) {
     'build'
   ]);
 };
+
+
+

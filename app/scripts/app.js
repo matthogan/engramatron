@@ -19,7 +19,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngLocalize',
-    'ngLocalize.InstalledLanguages'
+    'ngLocalize.InstalledLanguages',
+    'config'
   ])
   .config(function ($routeProvider) {
     $routeProvider
