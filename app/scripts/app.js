@@ -17,7 +17,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngLocalize',
+    'ngLocalize.InstalledLanguages'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -44,4 +46,12 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .value('localeSupported', [
+      'en-US',
+      'fr-FR',
+  ])
+  .value('localeFallbacks', {
+      'en': 'en-US',
+      'fr': 'fr-FR'
   });
