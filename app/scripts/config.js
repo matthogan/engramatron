@@ -2,6 +2,6 @@
 
  angular.module('config', [])
 
-.constant('ENV', {name:'development',tipHost:'http://localhost:8083/tip'})
+.constant('ENV', {name:'development',tipHost:'http://localhost:8083/tip',origin:'http://localhost:9000'})
 
 ;

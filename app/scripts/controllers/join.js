@@ -8,10 +8,27 @@
  * Controller of the engramatronApp
  */
 angular.module('engramatronApp')
-  .controller('JoinCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('JoinCtrl', function ($scope,$http,$q,$log,api,ENV) {
+    
+
+  	$scope.join = function(credentials)
+  	{
+  		credentials.question = 'MN';
+  		credentials.answer = 'Denham';
+
+  		var promise = api.createUser($q,$http,$log,ENV,credentials);
+    
+    	promise.then(
+	    	function(payload)
+	    	{
+	    		$scope.errorText = payload.text;
+	    	},
+	    	function(errorPayload)
+	    	{
+	    		$scope.errorText = 'Service Offline';
+	    		$log.error(errorPayload);
+	    	}
+    	);
+  	}
+
   });

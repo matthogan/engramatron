@@ -41,7 +41,8 @@ module.exports = function (grunt) {
         constants: {
           ENV: {
             name: 'development',
-            tipHost: 'http://localhost:8083/tip'
+            tipHost: 'http://localhost:8083/tip',
+            origin: 'http://localhost:9000'
           }
         }
       },
@@ -52,7 +53,8 @@ module.exports = function (grunt) {
         constants: {
           ENV: {
             name: 'home',
-            tipHost: 'http://localhost:8080/tip'
+            tipHost: 'http://localhost:8080/tip',
+            origin: 'http://localhost:9000'
           }
         }
       },
@@ -63,7 +65,8 @@ module.exports = function (grunt) {
         constants: {
           ENV: {
             name: 'production',
-            tipHost: 'http://localhost:8083/tip'
+            tipHost: 'http://localhost:8083/tip',
+            origin: 'http://localhost:9000'
           }
         }
       }

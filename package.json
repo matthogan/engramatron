@@ -28,6 +28,7 @@
     "imagemin-gifsicle": "*",
     "imagemin-jpegtran": "*",
     "imagemin-optipng": "^4.2.0",
+    "imagemin-pngquant": "^4.0.0",
     "jasmine-core": "*",
     "jshint-stylish": "*",
     "karma": "*",
