@@ -84,3 +84,31 @@ On nix/cygwin run in background:
 
 	grunt serve &
 
+##Invoking Services
+
+##CORS
+
+[Cross origin resource check](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#Access-Control-Allow-Headers)... aka pain in the ....
+
+![Cors Server Flowchart](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Cors Server Flowchart")
+
+###CORS Check
+
+See [HTTP access control (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+
+	curl -i -X OPTIONS <address>*
+	e.g.
+	curl -i -X OPTIONS http://localhost:8083/tip/user
+
+* address must be an exposed endpoint
+
+###Create User
+
+	curl -i -X POST -d @<json file> <address> --header "Content-type:application/json" --header "Accept:application/json"
+	e.g.
+	curl -i -X POST -d @user-post.json http://localhost:8083/tip/user --header "Content-type:application/json" --header "Accept:application/json"
+
+* for XML, just change the mime-type to application/xml and point to an xml request
+
+The file user-post.json may be found in /docs/json
+

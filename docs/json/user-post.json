@@ -1,0 +1,12 @@
+{
+    "username": "curly1",
+	"name": "Moe Curly1",
+	"email": "mo.curly@curly.net",
+	"credentials" :
+	{
+        "username": "curly1",
+	    "password": "password1",
+	    "question": "MN",
+	    "answer": "Curliette"
+	}
+}

@@ -27,7 +27,7 @@ angular.module('engramatronApp')
         
         $http.defaults.headers.common.Accept = 'text/plain';
         $http.defaults.headers.common['Content-Type'] = 'application/json'; 
-        $http.defaults.headers.common.Origin =  ENV.origin;
+        //$http.defaults.headers.common.Origin = ENV.origin;
 
         var deferred = $q.defer();
 
@@ -60,7 +60,7 @@ angular.module('engramatronApp')
         
         $http.defaults.headers.common.Accept = 'application/json';
         $http.defaults.headers.common['Content-Type'] = 'application/json';
-        $http.defaults.headers.common.Origin =  ENV.origin;
+        //$http.defaults.headers.common.Origin = ENV.origin;
 
         var deferred = $q.defer();
 
