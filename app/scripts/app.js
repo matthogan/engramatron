@@ -20,7 +20,8 @@ angular
     'ngTouch',
     'ngLocalize',
     'ngLocalize.InstalledLanguages',
-    'config'
+    'config',
+    'angular-carousel'
   ])
   .config(function ($routeProvider) {
     $routeProvider

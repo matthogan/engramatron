@@ -10,10 +10,11 @@
 angular.module('engramatronApp')
   .controller('MainCtrl', function ($scope,$http,$q,$log,userProfile,api,ENV) {
     
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+    $scope.ideas = 
+    [
+      'idea':{'ideaId':'1','data':'This is just one idea'},
+      'idea':{'ideaId':'2','data':'This is another one'},
+      'idea':{'ideaId':'3','data':'And this is the last'}
     ];
     
     $scope.meaningOfLife = userProfile.someMethod();
