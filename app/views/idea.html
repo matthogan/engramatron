@@ -14,10 +14,10 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                 <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                <form name="createIdea" id="createIdeaForm" novalidate>
+                <form name="createIdea" id="createIdeaForm" novalidate ng-controller="MainCtrl" ng-submit="return false;" >
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                        	<textarea  class="form-control" placeholder="Your thoughts..." id="idea" required data-validation-required-message="Don't forget your idea..."></textarea>
+                        	<textarea ng-model="editIdea" class="form-control" placeholder="Your thoughts..." id="idea" name="idea" required data-validation-required-message="Don't forget your idea..."></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12">
-                            <button type="submit" class="btn btn-success btn-lg">Store</button>
+                            <button type="button" class="btn btn-success btn-lg">Store</button>
                         </div>
                     </div>
                 </form>

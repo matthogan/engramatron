@@ -12,20 +12,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-2">
-                <p>
-                    <span class="text">I have an idea! I have a wife and can't keep her. Put her in a pumpkin shell. There I'll keep her very well. That ought to do it.</span><br/>
-                    <span class="creator">Peter Piper</span><br/>
-                    <span class="created-date">21/05/2014 10:34</span><br/>
-                </p>
+            <div class="text-left">
+                <h4>
+                    <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered class="carousel2">
+                        <li ng-repeat="idea in getIdeas() track by idea.ideaId">
+                            <span class="text">{{ idea.data }}</span><br/>
+                            <span class="text">{{ idea.name }}</span><br/>
+                            <span class="text">{{ idea.createdTimestamp }}</span><br/>
+                        </li>
+                    </ul>                
+                </h4>
             </div>
-            <div class="col-lg-4">
-                <p>
-                    <span class="text">Hey diddle, diddle, the cat and the fiddle. The cow jumped over the moon, the little dog laughed to see such fun and the dish ran away with the spoon.</span><br/>
-                    <span class="creator">The Dish</span><br/>
-                    <span class="created-date">26/05/2014 10:32</span><br/>
-                </p>
-            </div>
+        </div>
+        <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center"> 
                 <a ng-href="#/idea" class="btn btn-lg btn-outline"><any i18n="common.createidea"></any></a>
             </div>
